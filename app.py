@@ -208,7 +208,10 @@ if process_button:
                     st.success(f"Processing Complete! Created {len(chunks)} vector chunks & updated Neo4j Knowledge Graph.")
                 
             except Exception as e:
-                st.error(f"Error during ingestion pipeline: {e}")
+    import traceback
+    st.error(f"Error during ingestion pipeline: {e}")
+    st.code(traceback.format_exc())
+    print(traceback.format_exc(), flush=True)
 
 # ==============================================================================
 # UI Navigation Tabs
