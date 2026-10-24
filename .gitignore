@@ -4,3 +4,4 @@ __pycache__/
 data/
 vector_store/
 .streamlit/
+.chroma_db_store/
